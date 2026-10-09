@@ -9,4 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print repo details
-        run: echo "hello world"
+        run:  echo "Owner: ${{ github.repository_owner }}"
+          echo "Repo: ${{ github.event.repository.name }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "SHA: ${{ github.sha }}"
