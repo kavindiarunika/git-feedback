@@ -3,3 +3,10 @@ name: Test
 on:
   push:
     btanches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print repo details
+        run: echo "hello world"
